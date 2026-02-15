@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wink It Mussoorie</title>
+    <link rel="icon" type="image/png" href="newlogo.png">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
+    script-src 'self' 'unsafe-inline'; 
+    style-src 'self' 'unsafe-inline'; 
+    img-src 'self' data: https://nominatim.openstreetmap.org https://via.placeholder.com; 
+    connect-src 'self' https://nominatim.openstreetmap.org; 
+    frame-src https://wa.me; 
+    upgrade-insecure-requests;">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="cart-popup" class="cart-popup hidden" onclick="toggleSidebar()">
+        <div id="popup-images-container" class="popup-images"></div>
+        <p class="popup-text"><span id="popup-count">0</span> items in cart</p>
+    </div>
+
+    <header>
+        <a href="#abt"><h2 class="logo">Wink It Mussoorie</h2></a>
+        <div class="nav-links">
+            <a href="#abt"><h2>About Us</h2></a>
+            <a id="collectiona" href="#collection-view"><h2 onclick="location.reload()">Collections</h2></a>
+            <div class="order-trigger" onclick="toggleSidebar()">
+                Cart: <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="collection-view">
+        <h1>Collections</h1>
+        <div class="collection-grid" id="collection-grid"></div>
+    </main>
+
+    <div id="product-slider">
+        <div class="slider-header">
+            <h2 id="slider-title" class="slider-title-text">Collection</h2>
+            <button class="back-btn" onclick="toggleSlider()">✕</button>
+        </div>
+        <div id="product-grid"></div>
+    </div>
+
+    <div id="orderSidebar">
+        <button class="close-btn" onclick="toggleSidebar()">×</button>
+        <h2>Checkout</h2>
+        <div id="sidebar-content"></div>
+        <div id="sidebar-footer">
+            <hr>
+            <p>Items Total: Rs <span id="subtotal-val">0</span></p>
+            <p>Delivery Charges: Rs <span id="delivery-val">0</span></p>
+            <h3>Total Amount: Rs <span id="total-price">0</span></h3>
+            <div class="address-section">
+                <input type="text" id="cust-name" placeholder="Your Name">
+                <textarea id="cust-address" rows="3" placeholder="Address" ></textarea>
+                <h6>OR</h6>
+                <button class="location-btn" onclick="getLocation()">📍 Share Current Location</button>
+                <span id="location-display" class="location-status"></span>
+            </div>
+            <button class="checkout-btn" onclick="confirmAndSend()"><p>🔒 </p>Order via WhatsApp</button>
+        </div>
+    </div>
+
+    <div id="abt" class="about">
+        <h1 class="heading">About Us</h1>
+        <div class="abox">
+            <div class="atext">
+                <h1>Wink It Mussoorie</h1>
+                <p>At Wink It, we understand that your time is valuable. Founded in 2026, our mission is to provide the Mussoorie community with a premium delivery service for food and essential goods.
+                    <b>From 8:00 AM until 11:30 PM</b>, our team is on the road to reach you within <b>30 to 60 minutes</b>. To ensure your complete satisfaction, we provide real-time updates; if your preferred product is unavailable, we will reach out to you directly to discuss suitable alternatives.</p>
+                <a href="tel:7983427187"><button>Contact</button></a>
+            </div>
+            <div class="aimg">
+                <img src="newlogo.png" alt="Logo">
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="cbox">
+            <div class="cwrap">
+                <a href="#collection-view"><img class="cimg" src="newlogo.png" alt="Logo"></a>
+                <div>
+                    <div class="ctext">
+                        <h1>Address</h1>
+                        <h3>Nan Para House</h3>
+                        <h3>Mussoorie</h3>
+                        <h3>Uttarakhand-248179</h3>
+                        <h3>Contact: <a href="tel:7983427187">7983427187</a></h3>
+                        <div class="acc">
+                            <a href="https://www.instagram.com/wink_it_mussoorie"><img src="insta.jpg" alt="Instagram"></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://maps.app.goo.gl/bwTJwDNZd2GjVin98"><img class="cimg" src="map.jpg" alt="Map"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
