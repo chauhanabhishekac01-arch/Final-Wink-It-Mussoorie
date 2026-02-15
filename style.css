@@ -194,7 +194,7 @@ header {
 .popup-text { margin: 0; font-size: 0.9rem; }
 .hidden { display: none !important; }
 
-.about{ height: auto; width: 100%; border-radius: 25px; scroll-margin-top: 80px;}
+.about{ display: flex; justify-content: center; align-items: center; height: auto; width: 100%; border-radius: 25px; scroll-margin-top: 80px;}
 .abox{ display: grid; grid-template-columns: repeat(auto-fit, minmax(370px, 1fr)); align-items: center; }
 .atext{ justify-self: center; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 0px clamp(1rem, 4vw, 4rem); width: 90%; background-color: rgb(236, 174, 236); border-radius: 50px;}
 .atext h1{ padding-bottom: 0px; margin-bottom: 0px; }
@@ -227,6 +227,7 @@ header {
         word-wrap: break-word; 
         overflow-wrap: break-word;}
 }
+
 
 
 
