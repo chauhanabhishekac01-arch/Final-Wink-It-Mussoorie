@@ -105,11 +105,9 @@ header {
     overflow-y: auto;
     border: 2px solid black;
     background-color: rgb(252, 241, 252);
-    
 }
 #product-slider.active { transform: translateX(0); height: 100svh;}
 .slider-header { position: sticky; top: 0; background: rgb(197, 94, 197); padding: 15px 5%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ddd; z-index: 10; }
-.slider-title-text { margin: 0; color: white; }
 .back-btn { border: none; background: none; color: white; padding: 8px 15px; border-radius: 5px; cursor: pointer; }
 
 /* --- PRODUCT GRID --- */
@@ -159,7 +157,8 @@ header {
     position: fixed; 
     bottom: 0rem; 
     right: 0; 
-    width: 400px; 
+    width: 400px;
+    font-size: 1.2rem;
     max-width: 100%; 
     height: 100svh;
     background: white; 
@@ -179,33 +178,32 @@ header {
 .sidebar-controls { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
 .sidebar-qty-btn { background: #ffeb3b; border: 1px solid #333; border-radius: 4px; padding: 2px 8px; cursor: pointer; font-weight: bold; }
 
-.address-section { margin-top: 15px; background: #f4f4f4; padding: 12px; border-radius: 8px; }
+.address-section { margin-top: 15px; background: #f4f4f4; padding: 12px; border-radius: 8px; font-size: 1.2rem;}
+#cust-name{font-size: 1.2rem;}
+#cust-address{font-size: 1.2rem;}
+.address-section button{
+    font-size: 1.2rem;
+}
 .address-section input, .address-section textarea { width: 100%; margin-top: 8px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
 
-.location-btn { background: #007bff; color: white; border: none; padding: 10px; width: 100%; border-radius: 4px; margin-top: 10px; cursor: pointer; }
-.location-status { font-size: 11px; color: #666; display: block; margin-top: 5px; }
-
-.checkout-btn { width: 100%; padding: 15px; background: #25D366; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold; margin-top: 15px; display: flex; align-items: center; justify-content: center;}
+.checkout-btn { width: 100%; padding: 15px; background: #25D366; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1.5rem; font-weight: bold; margin-top: 15px; display: flex; align-items: center; justify-content: center;}
 .close-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; float: right; }
 
 .cart-popup { border: 1px solid purple; background-color: rgb(132, 247, 132); position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 320px; padding: 10px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); display: flex; flex-direction: column; align-items: center; z-index: 1500; cursor: pointer; }
 .popup-images { display: flex; gap: 4px; margin-bottom: 6px; }
 .cart-popup img { width: 30px; height: 30px; object-fit: cover; border-radius: 4px; }
-.popup-text { margin: 0; font-size: 0.9rem; }
 .hidden { display: none !important; }
 
-.about{ display: flex; justify-content: center; align-items: center; height: auto; width: 100%; border-radius: 25px; scroll-margin-top: 80px;}
+.about{ height: auto; width: 100%; border-radius: 25px; scroll-margin-top: 80px;}
 .abox{ display: grid; grid-template-columns: repeat(auto-fit, minmax(370px, 1fr)); align-items: center; }
-.atext{ justify-self: center; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 0px clamp(1rem, 4vw, 4rem); width: 90%; background-color: rgb(236, 174, 236); border-radius: 50px;}
+.atext{ justify-self: center; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 0px clamp(1rem, 5vw, 5rem); width: 85%; background-color: rgb(236, 174, 236); border-radius: 50px;}
 .atext h1{ padding-bottom: 0px; margin-bottom: 0px; }
 .atext p{ font-size: 1.2rem; hyphens: auto; overflow-wrap: break-word; word-wrap: break-word; text-align: justify; line-height: 1.5rem; }
 .atext button{ background-color: rgb(206, 72, 206); height: 3rem; width: clamp(8rem, 10vw, 10rem); border-radius: 25px; color: white; font-size: clamp(1rem, 2vw, 2rem); animation: move 1s linear infinite; cursor: pointer;}
 .atext button:hover{background-color: purple;}
-
 @keyframes move{ 0%{ transform: translateY(-5px); } 50%{ transform: translateY(0px); } 100%{ transform: translateY(-5px); } }
-
-.aimg{ justify-self: center; width: 90%; height: auto; border: 1px solid black;}
-.aimg img{ height: 100%; width: 100%; padding: 20px 0px; border-radius: 60px; box-sizing: border-box; object-fit: contain; box-sizing: border-box}
+.aimg{ justify-self: center; width: max-content; height: auto; }
+.aimg img{ height: 100%; width: clamp(22rem, 40vw, 40rem); padding: 20px 0px; border-radius: 60px; }
 
 .cbox{ margin-top: 2rem; height: 50%; width: 100%; overflow: hidden; border: 1px solid purple; border-radius: 25px; }
 .cwrap{ height: 50%; width: 100%; display: flex; justify-content: space-evenly; align-items: center; }
@@ -227,11 +225,3 @@ header {
         word-wrap: break-word; 
         overflow-wrap: break-word;}
 }
-
-
-
-
-
-
-
-
