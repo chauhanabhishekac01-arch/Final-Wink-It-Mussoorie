@@ -195,7 +195,7 @@ header {
 
 .about{ height: auto; width: 100%; border-radius: 25px; scroll-margin-top: 80px;}
 .abox{ display: grid; grid-template-columns: repeat(auto-fit, minmax(370px, 1fr)); align-items: center; }
-.atext{ justify-self: center; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 0px clamp(1rem, 4vw, 4rem); width: clamp(24rem, 36vw, 36rem); background-color: rgb(236, 174, 236); border-radius: 50px;}
+.atext{ justify-self: center; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 0px clamp(1rem, 4vw, 4rem); width: clamp(20rem, 36vw, 36rem); background-color: rgb(236, 174, 236); border-radius: 50px;}
 .atext h1{ padding-bottom: 0px; margin-bottom: 0px; }
 .atext p{ font-size: 1.2rem; hyphens: auto; overflow-wrap: break-word; word-wrap: break-word; text-align: justify; line-height: 1.5rem; }
 .atext button{ background-color: rgb(206, 72, 206); height: 3rem; width: clamp(8rem, 10vw, 10rem); border-radius: 25px; color: white; font-size: clamp(1rem, 2vw, 2rem); animation: move 1s linear infinite; cursor: pointer;}
@@ -227,5 +227,6 @@ header {
         overflow-wrap: break-word;}
 
 }
+
 
 
