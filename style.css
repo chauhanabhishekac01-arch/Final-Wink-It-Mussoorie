@@ -105,6 +105,7 @@ header {
     overflow-y: auto;
     border: 2px solid black;
     background-color: rgb(252, 241, 252);
+    
 }
 #product-slider.active { transform: translateX(0); height: 100svh;}
 .slider-header { position: sticky; top: 0; background: rgb(197, 94, 197); padding: 15px 5%; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ddd; z-index: 10; }
@@ -194,8 +195,8 @@ header {
 .hidden { display: none !important; }
 
 .about{ height: auto; width: 100%; border-radius: 25px; scroll-margin-top: 80px;}
-.abox{ display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); align-items: center; }
-.atext{ justify-self: center; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 0px clamp(1rem, 4vw, 4rem); width: 90%; background-color: rgb(236, 174, 236); border-radius: 50px;}
+.abox{ display: grid; grid-template-columns: repeat(auto-fit, minmax(370px, 1fr)); align-items: center; }
+.atext{ justify-self: center; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 0px clamp(1rem, 4vw, 4rem); width: clamp(26rem, 36vw, 36rem); background-color: rgb(236, 174, 236); border-radius: 50px;}
 .atext h1{ padding-bottom: 0px; margin-bottom: 0px; }
 .atext p{ font-size: 1.2rem; hyphens: auto; overflow-wrap: break-word; word-wrap: break-word; text-align: justify; line-height: 1.5rem; }
 .atext button{ background-color: rgb(206, 72, 206); height: 3rem; width: clamp(8rem, 10vw, 10rem); border-radius: 25px; color: white; font-size: clamp(1rem, 2vw, 2rem); animation: move 1s linear infinite; cursor: pointer;}
@@ -203,8 +204,8 @@ header {
 
 @keyframes move{ 0%{ transform: translateY(-5px); } 50%{ transform: translateY(0px); } 100%{ transform: translateY(-5px); } }
 
-.aimg{ justify-self: center; column; padding: 0px clamp(1rem, 4vw, 4rem); width: 90%; border-radius: 50px; height: 50%;}
-.aimg img{ height: 80%; width: 100%; padding: 20px 0px; border-radius: 60px; }
+.aimg{ justify-self: center; width: max-content; height: 80svh; }
+.aimg img{ height: 100%; width: 100%; padding: 20px 0px; border-radius: 60px; }
 
 .cbox{ margin-top: 2rem; height: 50%; width: 100%; overflow: hidden; border: 1px solid purple; border-radius: 25px; }
 .cwrap{ height: 50%; width: 100%; display: flex; justify-content: space-evenly; align-items: center; }
@@ -225,13 +226,4 @@ header {
         line-height: 1.1; 
         word-wrap: break-word; 
         overflow-wrap: break-word;}
-
 }
-
-
-
-
-
-
-
-
